@@ -1,0 +1,482 @@
+/* Css */
+
+/* Font Imports, the fonts are ITC avangarde for "h" tags and Roboto for "p" tags */
+@font-face
+{
+	font-family: ITC bold;
+	src: url(texgyreadventor-bold.otf);
+}
+
+@font-face
+{
+	font-family: ITC;
+	src: url(texgyreadventor-regular.otf);
+}
+
+@font-face
+{
+	font-family: Roboto;
+	src: url(Roboto-Regular.ttf);
+}
+
+
+/* General*/
+ 
+/*This section gives a style to general tags and classes used thought all the html pages */
+body
+{
+	font-family: "ITC bold";
+}
+
+p
+{
+	font-family: Roboto;
+	font-size: 0.8em;
+}
+
+/* This class resets the floating space */
+.clear
+{
+	clear: both;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+/* The container is set with a maximum width and a margin 0 auto to allow a clear display of the website with screen>1300px */
+.container
+{
+	max-width: 1300px;
+	margin: 0 auto; 
+}
+
+
+/* Header */
+.header
+{
+	width: 100%;
+	background-image: url(border.png);
+	background-position: center bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#home
+{
+	background: none;
+}
+
+/* The desktop/tablet version and the mobile one have different logos, the display:none hides them when necessary */
+.logo
+{
+	float: left;
+	padding-bottom: 3px;
+}
+
+.logo-mob
+{
+	display: none;
+}
+
+.access
+{
+	position: relative;
+	float: right;
+}
+
+.big-bw
+{
+	background: black;
+	color: white;
+}
+
+.search
+{
+	float: right;
+}
+
+input[type=text]
+{
+    width: 60%;
+    border: 3px solid black;
+    border-right: 0;
+    height: 22.4px;
+    display: inline;
+    float: left;
+}
+
+.nav
+{
+	float: right;
+	position: relative;
+	top: 40px;
+	left: 200px;
+	text-align: center;
+}
+
+.nav ul li
+{
+	display: inline;
+	list-style-type: none;
+	font-family: ITC bold;
+}
+
+.nav ul li a
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Desktop/tablet and mobile versions have different navigation, this hides the mobile button for the navigation in the other versions */
+.nav-mob-but
+{
+	display: none;
+}
+
+/* This selects with different colours each page you are visiting */
+#homeselect
+{
+	background: rgba(0, 71, 45, 0.7);
+}
+
+#eventselect
+{
+	background: rgba(0, 48, 89, 0.7);
+}
+
+#storeselect
+{
+	background: rgba(255, 203, 2, 0.7);
+}
+
+#artistselect
+{
+	background: rgba(235, 25, 1, 0.7);
+}
+
+.artistintselect
+{
+	background: rgba(235, 25, 1, 0.5);
+}
+
+#aboutselect
+{
+	background: rgba(84, 46, 117, 0.7);
+}
+
+#mapselect
+{
+	background: rgba(34, 144, 147, 0.79);
+	padding: 3px;
+}
+
+
+/* This styles the content for every page */
+.content
+{
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/* Home Page*/
+.news
+{
+	float: left;
+	width: 27%;
+	margin: 3%;
+}
+
+/* In the desktop version for the news is displayed just the "p" tags, for tablet/mobile just the "h3" */
+.news h3
+{
+	display: none;
+}
+
+/* This selects each news, based on the category it belongs, with a coulored border when you hover on it */
+/* The white border is necessary to occupy the border space even before the hover, otherwise it would take a news space and would move other elements */
+.hover-event
+{
+	border-bottom: 5px solid white;
+}
+.hover-event:hover
+{
+	border-bottom: 5px solid rgba(0, 48, 89, 0.7);
+}
+
+.hover-artist
+{
+	border-bottom: 5px solid white;
+}
+.hover-artist:hover
+{
+	border-bottom: 5px solid rgba(235, 25, 1, 0.7);
+}
+
+.hover-store
+{
+	border-bottom: 5px solid white;
+}
+.hover-store:hover
+{
+	border-bottom: 5px solid rgba(255, 203, 2, 0.7);
+}
+
+
+/* Events page */
+.event
+{
+	width: 100%;
+	margin-top: 3%;
+}
+.eventimg
+{
+	float:left;
+	margin-left: 5%;
+	margin-top:3%;
+}
+
+.eventdet1
+{
+	float: left;
+	margin-left: 5%;
+	width: 30%;
+}
+.eventdet2
+{
+	float:left;
+	margin-left: 5%;
+	margin-top:7%;
+	width: 25%;
+}
+
+.eventdet2 a h3
+{
+	background: rgba(0, 48, 89, 0.7);
+	width: 100%;
+	text-align: center;
+}
+
+
+/* Artists page */
+.artist
+{
+	width: 115%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+.artist a
+{
+	float: left;
+	margin-top: 3%;
+	margin-right: 2%;
+}
+
+.artist a:hover 
+{
+	opacity: 0.7;
+}
+
+/* This creates a tag on the artist's picture when you hover it, it's hidden with the visibility instead of the display:none to occupy the space even before the hover, otherwise it would take a news space and would move other elements */
+.artist a h3
+{
+	width:70%;
+	padding: 30px;
+	background: rgba(235, 25, 1, 0.7);
+	position: relative;
+	bottom: 150px;
+	left: -20px;
+	visibility: hidden;
+}
+
+.artist a:hover h3
+{
+	visibility: visible;
+}
+
+
+/* Artist internal page */
+.artistimg img
+{
+	float:left;
+	margin: 3% 0 3% 3%;
+}
+
+.artistdet1
+{
+	float: left;
+	margin-left: 5%;
+	width: 30%
+}
+
+/* The overflow is used to create a scrolling image-show of the discography of the artist and the :hover is used to highlight the selected image */
+.artistdet2
+{
+	float:left;
+	margin-left: 10%;
+	margin-top:5%;
+	width: 15%;
+	text-align: center;
+	height:500px;
+	overflow-y: scroll;
+}
+
+.artistdet2 img
+{
+	width: 80%;
+}
+
+.artistdet2 img:hover
+{
+	width: 100%;
+}
+
+
+/* Store page */
+.store
+{
+	width: 100%;
+	margin-top: 3%;
+}
+
+.storeimg
+{
+	float:left;
+	margin-left: 5%;
+	margin-top:3%
+}
+
+.storedet1
+{
+	float: left;
+	margin-left: 10%;
+	width: 30%
+}
+.storedet2
+{
+	float:left;
+	margin-left: 10%;
+	margin-top:10%;
+	width: 15%;
+}
+
+.storedet2 a h3
+{
+	background: rgba(255, 203, 2, 0.7);
+	width: 100%;
+	text-align: center
+}
+
+
+/* About page */
+.aboutimg
+{
+	float:left;
+	margin: 5% 0 9% 3%;
+}
+
+.aboutdet1
+{
+	float: left;
+	margin-left: 5%;
+	width: 25%;
+	margin-top:3%;
+}
+.aboutdet2
+{
+	float:left;
+	margin-left: 10%;
+	margin-top:3%;
+}
+
+
+/* SiteMap Page */
+.map li
+{
+	list-style-type:cjk-ideographic;
+	padding: 15px;
+	margin: 3px;
+}
+
+.map
+{
+	float: left;
+}
+
+.maplogo
+{
+	position: relative;
+	top: 90px;
+	left:27%;
+}
+
+
+/* Mock-up for the search results pages */
+.search1
+{
+	float: left;
+}
+
+.filters li
+{
+	list-style-type: none;
+}
+
+.search-res
+{
+	width: 70%;
+	margin-left: 25%;
+}
+
+.search-res2
+{
+	width: 70%;
+	margin-left: 11%;
+}
+
+.search-res img
+{
+	width: 40%;
+	float: left;
+	margin: 7% 10% 3% 5%;
+}
+
+.search-res-text
+{
+	position: relative;
+	top: 70px;
+}
+
+.search-res2 img
+{
+	width: 40%;
+	float: left;
+	margin: 7% 10% 3% 25%;
+}
+
+/* This styles the footer, it's the same for each page */
+.footer
+{
+	width: 100%;
+    background-image: url(border.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	padding-top: 5px;
+}
+
+.footer p
+{
+	float: left;
+}
+
+.social
+{
+	float: right;
+}
+
